@@ -4,15 +4,19 @@ while True:
     if exam_grade == your_rating and exam_grade == "5":
         print("Чудово")
         break
+
     if exam_grade == your_rating and exam_grade == "1":
         print("Дуже погано")
         break
+
     if exam_grade == your_rating and exam_grade == "2":
         print("Погано")
         break
+
     if exam_grade == your_rating and exam_grade == "3":
         print("Задовільно")
         break
+
     if exam_grade == your_rating and exam_grade == "4":
         print("Добре")
 
