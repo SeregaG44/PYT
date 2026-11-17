@@ -1,15 +1,12 @@
-#print("start")
-#temp=20
-#if temp<15:
+# print("start")
+# temp=20
+# if temp<15:
 #    print("Вдягни куртку!")
-#elif temp==15:
+# elif temp==15:
 #    print("куртку на усмотрение")
-#else:
+# else:
 #    print("на улице тепло")
-#print("end")
-
-
-
+# print("end")
 
 
 product = input("віедіть назву товару: ")

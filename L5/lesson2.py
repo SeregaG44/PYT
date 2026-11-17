@@ -107,4 +107,3 @@ elif 6 <= month_num <= 8:
 
 else:
     print("осінь")
-

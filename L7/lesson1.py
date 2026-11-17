@@ -31,7 +31,7 @@
 # for num in range(5):
 #     print(num)
 
-# range(start, stop) -- start, start+1, ... stop-1(початок та кінець(невключно діапазону)
+# range(start, stop) -- start, start+1, ..stop-1(початок та кінець(невключно діапазону)
 
 # for num in range(10, 20):
 #     print(num)

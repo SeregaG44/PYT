@@ -1,16 +1,16 @@
-age=20
-has_ticket=True
+age = 20
+has_ticket = True
 
-if age >=18 and has_ticket:
+if age >= 18 and has_ticket:
     print("Прохід дозволено")
 else:
     print("Прохід заборонено")
 
 ################################
 
-day="понеділок"
+day = "понеділок"
 
-if day=="субота" or day=="неділя":
+if day == "субота" or day == "неділя":
     print("Вихідний")
 else:
     print("Робочий день")
@@ -21,7 +21,7 @@ else:
 month_num = 7
 
 # зиму
-if month_num == 12 or month_num == 1 or month_num==2
+if month_num == 12 or month_num == 1 or month_num == 2:
     print("Зима")
 elif month_num >= 3 and month_num <= 5:
     print("Весна")

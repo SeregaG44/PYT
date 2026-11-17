@@ -18,7 +18,6 @@
 #
 #
 # print(f"Ви з'їли {eaten} ягід.")
-from unittest import result
 
 # # # Користувач вводить суму в гривнях поки не введе 0
 # # # Вивести на екран скільки це доларів
@@ -42,9 +41,6 @@ from unittest import result
 #
 #     print(f"{uah:.2f}грн це {usd:.2f}$")
 #     print()
-
-
-
 
 
 # Початковий внесок в банку дорівнює 1000 грн.
@@ -94,8 +90,6 @@ from unittest import result
 #
 # print(1000000)
 # print(1_000_000)
-
-
 
 
 # Написати програму для конвертації валют.
@@ -150,6 +144,6 @@ while True:
         rate = JPY_RATE
         symbol = "єн"
 
-    result = uah / rate
-    print(f"Це буде {result:.2f} {symbol}")
+    resultat = uah / rate
+    print(f"Це буде {resultat:.2f} {symbol}")
     print()
