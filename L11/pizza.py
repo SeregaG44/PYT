@@ -30,13 +30,17 @@ while True:
 
         if price is not None:
             pizzas_number = int(input("яку кількість Ви бажаєте: "))
-            item_total = price * pizzas_number
-            check += item_total
-            goods += f"• {pizza_name}       {pizzas_number} шт.     {price} грн\n"
+            if 15 > pizzas_number > 0:
+                item_total = price * pizzas_number
+                check += item_total
+                goods += f"• {pizza_name}       {pizzas_number} шт.     {price} грн\n"
 
-            print(
-                f"Замовлено піцу: {pizza_name}, {pizzas_number} шт ({item_total} грн)\n"
-            )
+                print(
+                    f"Замовлено піц:{pizza_name},{pizzas_number}шт ({item_total} грн)\n"
+                )
+
+            else:
+                print(f"Ми не можимо виготовити {pizzas_number} піц")
 
     elif menu == 2:
         print("========== ВАШЕ ЗАМОВЛЕННЯ ==========")
