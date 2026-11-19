@@ -25,40 +25,38 @@ while True:
             price = four_cheeses
 
         else:
-            price = None
+            #            price = None
             print("Такої піци нажаль нема")
+            continue
 
-        if price is not None:
-            pizzas_number = int(input("яку кількість Ви бажаєте: "))
-            if 15 > pizzas_number > 0:
-                item_total = price * pizzas_number
-                check += item_total
-                goods += f"• {pizza_name}       {pizzas_number} шт.     {price} грн\n"
+        pizzas_number = int(input("яку кількість Ви бажаєте: "))
 
-                print(
-                    f"Замовлено піц:{pizza_name},{pizzas_number}шт ({item_total} грн)\n"
-                )
+        if pizzas_number <= 0 or pizzas_number >= 15:
+            print(f"Ми не можимо виготовити {pizzas_number} піц")
+            continue
 
-            else:
-                print(f"Ми не можимо виготовити {pizzas_number} піц")
+        item_total = price * pizzas_number
+        check += item_total
+        goods += f"• {pizza_name}       {pizzas_number} шт.     {price} грн\n"
+
+        print(f"Замовлено піц:{pizza_name},{pizzas_number}шт ({item_total} грн)\n")
 
     elif menu == 2:
+        if goods == "":
+            print("Ваш кошик порожній.")
+            continue
+
         print("========== ВАШЕ ЗАМОВЛЕННЯ ==========")
         print()
         print("Піца     Кількість       Вартість")
         print("--------------------------------------")
-
-        if goods == "":
-            print("Ваш кошик порожній.")
-
-        else:
-            print(goods.strip())
-            print()
-            print("--------------------------------------")
-            print(f"Загальна вартість: {check} грн")
-            print("======================================")
-            print("Дякуємо за замовлення!")
+        print(goods.strip())
+        print()
+        print("--------------------------------------")
+        print(f"Загальна вартість: {check} грн")
+        print("======================================")
+        print("Дякуємо за замовлення!")
 
     else:
-        print("До зустрічі!")
+        print("До зусрічі!")
         break
