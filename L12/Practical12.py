@@ -15,20 +15,39 @@
 
 # 2
 
+# text = input("ведіть текст: ")
+
+# count_text = len(text)
+# print(f"\nкількість символів: {count_text}")
+
+# if "python" in text.lower():
+#    print("слово python присутьнє")
+
+# else:
+#    print("слово python немає")
+
+# count_szh = 0
+# for char in text.lower():
+#    if char in "szh":
+#        count_szh += 1
+
+# print(f"символ зустрічається s, z, h: \nразів {count_szh}")
+
+
+# 3
+
+# text = input("Введіть текст: ")
+
+# result = text.replace(" ", "-")
+# print(f"Змінений текст: {result}")
+
+
+# 4
+
 text = input("ведіть текст: ")
+word = input("Введіть слово: ")
+count = 0
 
-count_text = len(text)
-print(f"\nкількість символів: {count_text}")
+count = text.count(word)
 
-if "python" in text.lower():
-    print("слово python присутьнє")
-
-else:
-    print("слово python немає")
-
-count_szh = 0
-for char in text.lower():
-    if char in "szh":
-        count_szh += 1
-
-print(f"символ зустрічається s, z, h: \nразів {count_szh}")
+print(f"Cлово: {word} \nзустрічається: {count} разів")
