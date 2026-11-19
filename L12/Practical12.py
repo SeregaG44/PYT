@@ -44,10 +44,72 @@
 
 # 4
 
-text = input("ведіть текст: ")
-word = input("Введіть слово: ")
-count = 0
+# text = input("ведіть текст: ")
+# word = input("Введіть слово: ")
+# count = 0
 
-count = text.count(word)
+# count = text.count(word)
 
-print(f"Cлово: {word} \nзустрічається: {count} разів")
+# print(f"Cлово: {word} \nзустрічається: {count} разів")
+
+
+# 5
+
+# items = input("Введіть ваші речі: ")
+# items = items.lower()
+
+# if "ніж" in items or "гроші" in items or "отрута" in items:
+#    print("У вас є речі які заборонено перевозити")
+
+# else:
+#    print("Оформлено доставку")
+
+
+# 6
+
+# text = input("ведіть текст: ")
+# count_letters = 0
+# count_digits = 0
+
+# for ch in text:
+#    if ch.isdigit():
+#        count_digits += 1
+
+#    else:
+#        count_letters += 1
+
+# print(f"Кількість цифр: {count_digits} \nКількість літер: {count_letters}")
+
+
+# 7
+
+print("Правильний пароль повинен:")
+
+print("Бути довшим за 8 символів")
+print("Містити хоча б одну цифру")
+print("Містити хоча б одну літеру")
+print()
+
+while True:
+    password = input("Задайте новий пароль: ")
+    length = len(password)
+    count_letters = 0
+    count_digits = 0
+
+    for ch in password:
+        if ch.isdigit():
+            count_digits += 1
+
+        else:
+            count_letters += 1
+
+    if length > 8:
+        if count_digits >= 1 and count_letters >= 1:
+            print("Ви ввели вірний пароль")
+            break
+
+        else:
+            print("Пароль не відповідає критеріям")
+
+    else:
+        print("Пароль повинен бути довшим за 8 символів ")
