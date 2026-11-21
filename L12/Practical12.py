@@ -99,17 +99,27 @@ while True:
     for ch in password:
         if ch.isdigit():
             count_digits += 1
-
         else:
             count_letters += 1
 
-    if length > 8:
-        if count_digits >= 1 and count_letters >= 1:
-            print("Ви ввели вірний пароль")
-            break
+    if length > 8 and count_digits >= 1 and count_letters >= 1:
+        print("Ви ввели вірний пароль")
+        break
 
-        else:
-            print("Пароль не відповідає критеріям")
+    if length < 8:
+        print("Пароль повинен бути довшим за 8 символів ")
+
+        continue
+
+    if count_digits == 0:
+        print("Пароль повинен містит хоча б онду цифру ")
+
+        continue
+
+    if count_letters == 0:
+        print("Пароль повинен містит хоча б онду літеру ")
+
+        continue
 
     else:
         print("Пароль повинен бути довшим за 8 символів ")
