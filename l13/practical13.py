@@ -31,7 +31,7 @@
 # start = int(input("Введіть індекс: "))
 
 # segment_start = text[:start]
-# segment_end = text[start:]
+# segment_end = text[-start:]
 
 # print(segment_start)
 # print(segment_end)
@@ -136,3 +136,91 @@
 # print(f"Це дієслово: {past_tense.strip()}")
 # print(f"Починаються на голосну: {vowels.strip()}")
 # print(f"Решта: {other.strip()}")
+
+
+# 10 Користувач вводить математичний вираз, наприклад 23+45. Виведіть результат
+# Обробіть такі математичні операції – +*/-
+# Реалізуйте як консольну програму(закінчити якщо введено EXIT)
+
+# while True:
+#    calculator = input("Введіть математичний вираз: ")
+
+#    if "+" in calculator:
+#        a, b = calculator.split("+")
+#        print(f"Результат: {float(a) + float(b)}")
+#        print()
+
+#    elif "-" in calculator:
+#        a, b = calculator.split("-")
+#        print(f"Результат: {float(a) - float(b)}")
+#        print()
+
+#    elif "*" in calculator:
+#        a, b = calculator.split("*")
+#        print(f"Результат: {float(a) * float(b)}")
+#        print()
+
+#    elif "/" in calculator:
+#        a, b = calculator.split("/")
+#        print(f"Результат: {float(a) / float(b)}")
+#        print()
+
+#    elif calculator == "EXIT":
+#        print("EXIT")
+#        break
+
+#    else:
+#        print("Невідома дія")
+
+
+# 11 Користувач вводить текст та число. Зробіть циклічний зсув,
+# тобто індекси всіх символів збільшуються на певне число,
+# а символи з кінця опиняються спереду.
+# Приклади
+# abcde 1 – eabcd
+# abcde 3 – cdeab
+# abcde -1 – bcdea
+
+# text = input("Введіть рядок: ").strip().lower()
+# number = int(input("Введіть число: "))
+
+# if len(text) > 0:
+#    number = number % len(text)
+#    numbers = text[-number:] + text[:-number]
+#    print(f"{text}: зсув на {number} символів, результат: {numbers}")
+
+# else:
+#    print("результат")
+
+
+# 12 Реалізуйте римське шифрування – кожен символ замінюється
+# на інший, який знаходиться на певній відстані в алфавіті.
+# Користувач вводить текст, число та пропонує зашифрувати або
+# розшифрувати текст.
+# Щоб отримати позицію в алфавіті – ord(letter)
+# Щоб отримати символ за позицією – chr(num)
+
+
+text = input("Введіть рядок: ").strip()
+number = int(input("Введіть число: "))
+shifr = int(input("Зашифрувати чи розшифрувати? (1/2): "))
+
+if shifr == 2:
+    number = -number
+
+elif shifr != 1:
+    print("Невідома дія, використовується шифрування")
+
+result = ""
+
+for char in text:
+    if "a" <= char <= "z":
+        base = ord("a")
+        result += chr((ord(char) - base + number) % 26 + base)
+    elif "A" <= char <= "Z":
+        base = ord("A")
+        result += chr((ord(char) - base + number) % 26 + base)
+    else:
+        result += char
+
+print(f"Результат: {result}")
