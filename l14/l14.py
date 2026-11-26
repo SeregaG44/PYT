@@ -3,11 +3,29 @@
 # ● Збільшіть кожне число в 3 рази та виведіть результат
 # ● Замініть усі числа більші 10 на 0 та виведіть результат
 
-num = [1, 8, -5, 9]
-print(num)
-for i in range(len(num)):
-    num[i] *= 3
+# num = [1, 8, -5, 9]
+# print(num)
+# for i in range(len(num)):
+#    num[i] *= 3
 
-    if num[i] > 10:
-        num[i] = 0
-        print(f"{num =}")
+#    if num[i] > 10:
+#        num[i] = 0
+#        print(f"{num =}")
+
+
+# 2 Користувач вводить числа, поки не введе -1. Збережіть усі ці
+# числа в список. Виведіть їхню кількість, суму, мінімальне, максимальне та середнє.
+# Скористайтесь функціями min, max, sum, len
+
+numbers = []
+while True:
+    num = int(input("Введіть число: "))
+
+    if num == -1:
+        break
+
+    numbers.append(num)
+    print(
+        f"Кількість: {len(numbers)}, Сума: {sum(numbers)}, Мін: {min(numbers)}"
+        f", Макс: {max(numbers)}, Середнє:{sum(numbers) / len(numbers)}"
+    )
