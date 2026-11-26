@@ -59,16 +59,89 @@
 # збільшити усім зарплату.
 # Виведіть нові зарплати
 
-salaries = []
+# salaries = []
+# while True:
+#    salarie = int(input("Ведіть зарплати: "))
+
+#    if salarie == -1:
+#        break
+#    salaries.append(salarie)
+
+# salary_percentage = int(input("Введіть % збільшення ЗП: "))
+
+# for i in range(len(salaries)):
+#    salaries[i] = salaries[i] * (1 + salary_percentage / 100)
+# print(f"{salaries = }")
+
+
+# 5 Користувач вводить кількість днів, після чого
+# температуру повітря кожного дня.
+# Збережіть температури у список
+# Для кожного дня порахуйте різницю температур з
+# попереднім днем.
+
+# temperatures = []
+# days = int(input("Введіть кількість днів: "))
+
+# for i in range(days):
+
+#    temperature = float(input(f"Введіть температуру за {i + 1}-й день: "))
+#    temperatures.append(temperature)
+
+# print("Температури:", temperatures)
+
+# for i in range(days):
+#    difference = temperatures[i] - temperatures[i - 1]
+#    print(f"Різниця температур за {i + 1}-й день: {difference}")
+
+
+# 6 Створіть застосунок банк. Є список з рахунками клієнтів.
+# Користувач вибирає одну з команд
+# ● Додати клієнта
+# ● Видалити клієнта
+# ● Поповнити рахунок
+# ● Зняти кошти
+# ● Вихід
+# При додаванні клієнта, добавте рахунок в 0грн в кінець списку.
+# В інших випадках запросіть ID(індекс) клієнта і якщо він вірний, то проведіть операцію
+
+print("1 - Додати клієнта")
+print("2 - Видалити клієнта")
+print("3 - Поповнити рахунок")
+print("4 - Зняти кошти")
+print("5 - Вихід")
+
+clients = []
+checks = []
+
 while True:
-    salarie = int(input("Ведіть зарплати: "))
+    menu = int(input("Введіть команду (1-5): "))
+    if menu == 1:
+        client = input("Введіть ім'я клієнта: ")
+        clients.append(client)
+        checks.append(0)
 
-    if salarie == -1:
+    elif menu == 2:
+        client = input("Введіть ім'я клієнта: ")
+        clients.pop(client)
+        checks.pop(0)
+
+    elif menu == 3:
+        client = input("Введіть ім'я клієнта: ")
+        if client in clients:
+            idx = clients.index(client)
+            amount = int(input("Введіть суму: "))
+            checks[idx] += amount
+            print(f"Рахунок: {client}, поповнено {amount}, Cума рахунку: {checks[idx]}")
+
+    elif menu == 4:
+        client = input("Введіть ім'я клієнта: ")
+        if client in clients:
+            idx = clients.index(client)
+            amount = int(input("Введіть суму: "))
+            checks[idx] -= amount
+            print(f"Рахунок: {client}, знято {amount}, Cума рахунку: {checks[idx]}")
+
+    else:
+        print("Вихід")
         break
-    salaries.append(salarie)
-
-salary_percentage = int(input("Введіть % збільшення ЗП: "))
-
-for i in range(len(salaries)):
-    salaries[i] = salaries[i] * (1 + salary_percentage / 100)
-print(f"{salaries = }")
