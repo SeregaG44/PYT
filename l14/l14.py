@@ -17,15 +17,38 @@
 # числа в список. Виведіть їхню кількість, суму, мінімальне, максимальне та середнє.
 # Скористайтесь функціями min, max, sum, len
 
-numbers = []
-while True:
-    num = int(input("Введіть число: "))
+# numbers = []
+# while True:
+#    num = int(input("Введіть число: "))
 
-    if num == -1:
+#    if num == -1:
+#        break
+
+#    numbers.append(num)
+#    print(
+#        f"Кількість: {len(numbers)}, Сума: {sum(numbers)}, Мін: {min(numbers)}"
+#        f", Макс: {max(numbers)}, Середнє:{sum(numbers) / len(numbers)}"
+#    )
+
+
+# 3 Користувач вводить числа, поки не введе 0. Створіть
+# два нових списки: з додатніми та від’ємними числами.
+# Виведіть елементи обох списків на екран.
+# Виправіть помилку в коді
+
+positive = []
+negative = []
+
+while True:
+    number = int(input("Введіть число (0 для завершення): "))
+
+    if number > 0:
+        positive.append(number)
+        print("Додатні числа:", positive)
+
+    elif number == 0:
         break
 
-    numbers.append(num)
-    print(
-        f"Кількість: {len(numbers)}, Сума: {sum(numbers)}, Мін: {min(numbers)}"
-        f", Макс: {max(numbers)}, Середнє:{sum(numbers) / len(numbers)}"
-    )
+    else:
+        negative.append(number)
+        print("Від'ємні числа:", negative)
