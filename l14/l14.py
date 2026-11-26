@@ -36,19 +36,39 @@
 # Виведіть елементи обох списків на екран.
 # Виправіть помилку в коді
 
-positive = []
-negative = []
+# positive = []
+# negative = []
 
+# while True:
+#    number = int(input("Введіть число (0 для завершення): "))
+
+#    if number > 0:
+#        positive.append(number)
+#        print("Додатні числа:", positive)
+
+#    elif number == 0:
+#        break
+
+#    else:
+#        negative.append(number)
+#        print("Від'ємні числа:", negative)
+
+
+# 4 Користувач вводить зарплати співробітників, поки не
+# введе -1. Після чого вводить відсоток на який треба
+# збільшити усім зарплату.
+# Виведіть нові зарплати
+
+salaries = []
 while True:
-    number = int(input("Введіть число (0 для завершення): "))
+    salarie = int(input("Ведіть зарплати: "))
 
-    if number > 0:
-        positive.append(number)
-        print("Додатні числа:", positive)
-
-    elif number == 0:
+    if salarie == -1:
         break
+    salaries.append(salarie)
 
-    else:
-        negative.append(number)
-        print("Від'ємні числа:", negative)
+salary_percentage = int(input("Введіть % збільшення ЗП: "))
+
+for i in range(len(salaries)):
+    salaries[i] = salaries[i] * (1 + salary_percentage / 100)
+print(f"{salaries = }")
